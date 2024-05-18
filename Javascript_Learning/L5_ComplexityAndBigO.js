@@ -33,15 +33,30 @@ Compare algorithms
 
 */
 
-//他們都要完成一樣的TASK
+//BIG O
 // 1 + 2 + 3 + ... + n = sum
 function fun1(n) {
-  //for
-  //let sum
-  //return sum
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    //o(n)
+    sum += i;
+  }
+  return sum;
 }
-
 console.log(fun1(10));
-//1+...+10的總和 -> 55
 
-function fun2(n) {}
+function fun2(n) {
+  return ((1 + n) * n) / 2; //o(1)
+}
+console.log(fun2(10));
+
+/*Complexity(adj.)  時間複雜度  */
+
+/*
+**comparison 比較 (> < >= <= = etc...)
+generally, every `+ - * /` ,comparison counts as one operation
+
+
+complexity means given an input size, "how many operations do we need perform in an algorithm"?
+
+*/
